@@ -1,5 +1,5 @@
 *****************************************************************************
-* RRS Add submission records for converted data for districts DOS 	    *
+* RRS Create Role and user that the api will use to acces the client view   *
 * DATE CREATED : 2022-02-16                                                 *
 * AUTHOR : CGI                                                              *
 * System : FSA                                                              *
