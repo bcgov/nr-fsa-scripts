@@ -13,7 +13,7 @@ reviewed for errors at the conclusion of running all scripts. Also
 ensure to "SET SCAN OFF" in SQL*Plus to avoid getting prompted for
 replacement values.
 ensure to "SET SQLBL ON" in SQL*Plus to accept the blank lines in the sql scripts.
-Environments include:  DBQ01, DBP01 - Production
+Environments include:  FORTMP1, DBQ01, DBP01 - Production
 
 
 =============
