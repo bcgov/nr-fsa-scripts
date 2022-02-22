@@ -31,7 +31,7 @@ SET SQLBL ON;
 
 2) Run scripts for role and user
 
-start CreateFSA_API_ROLE.sql
+start Create_FSA_API_ROLE.sql
 start Create_FSA_PROXY_USER.sql
 
 
