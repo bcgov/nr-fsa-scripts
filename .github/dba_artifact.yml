@@ -1,0 +1,59 @@
+# This action does two things:
+# 1. It acts as a check to make sure that a PR only affects one set of scripts
+# 2. It creates an artifact that we can use to send an immutable link to a DBA so they can download the scripts as a zip
+
+name: dba_artifact
+
+# This action runs when you merge to main or open (or change) a PR into main
+on:
+  push:
+    branches: [ main ]
+    paths:
+    - 'scripts/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+    - 'scripts/**'
+
+jobs:
+
+  # Identify the folder that needs to be packaged into an artifact
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      create_artifact: ${{ steps.set-dir.outputs.create_artifact }}
+      path: ${{ steps.set-dir.outputs.path }}
+    steps:
+      - uses: actions/checkout@v2
+      
+      # Find the files that are different so we can identify which package needs to be turned into an artifact
+      - id: files
+        name: Get change set
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'csv'
+    
+      - id: set-dir
+        name: Calculate directories to turn into artifacts
+        run: |
+          declare -a dirs=()
+          for d in scripts/*/ ; do
+            if [[ ${{ steps.files.outputs.all }} =~ $d ]];
+            then
+                dirs+=("${d}")
+            fi
+          done
+          if [ ${#dirs[@]} -gt 1 ];
+          then
+            echo "You may not change more than 1 directory in a single PR. This one has ${#dirs[@]} directories with changes."
+            exit 1
+          fi
+          echo "::set-output name=path::${dirs[0]}"
+      
+      # Create an artifact that can be accessed as a zip file download
+      - uses: actions/upload-artifact@v3
+        if: ${{ success() }}
+        with:
+          name: "changescripts"
+          path: ${{ steps.set-dir.outputs.path }}
+          
