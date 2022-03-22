@@ -15,7 +15,7 @@ replacement values.
 ensure to "SET SQLBL ON" in SQL*Plus to accept the blank lines in the sql scripts.
 Environments include:  FORTMP1, DBQ01, DBP01 - Production
 
-The zip file for this set of scripts can be found on github as an artifact of the build where it was checked in.
+The zip file for this set of scripts can be found on github as an artifact of the build where it was checked in. See the readme in the repo for instructions.
 
 
 =============
