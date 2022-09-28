@@ -1,8 +1,8 @@
 *****************************************************************************
-* SPAR - Create Proxy user in test env for spar	                            *
-* DATE CREATED : 2022-09-08                                                 *
+* SPAR - Create Proxy accounts for the new SPAR application                 *
+* DATE CREATED : 2022-09-28                                                 *
 * AUTHOR : CGI                                                              *
-* System : SPAR								    *
+* System : SPAR                                                             *
 *                                                                           *
 *****************************************************************************
 
@@ -10,29 +10,24 @@ INSTRUCTIONS:
 
 Environments include: FORTMP1, DBQ01, DBP01
 
-=============
-RRS Updates
-============
 
+1) Log in to database as the schema owner, via SQL*Plus.  
 
-1) Log in to database as the schema owner and execute the SET statements before running the scripts
+Execute the SET statements before running the scripts
 
-sqlplus username/password@Environment
+$ sqlplus username/password@Environment
 
-SET SCAN OFF;
+SET DEFINE ON;
 SET SQLBL ON;
 
+2) From the SQL Prompt, run the proxy roles creation script
 
-2) Run proxy user creation script
+start create_proxy_spar_roles.sql
 
-start Create_PROXY_MOF_DEV_SPAR.sql
-start CreatePROXY_MOF_DEV_SPAR_READ_ROLE.sql
+3) From the SQL Prompt, run the proxy user creation script
 
+start create_proxy_spar_accounts.sql
 
-3)  Commit the changes
+4) Exit SQL*Plus
 
-     commit changes
-     commit;
-
-4) EXIT
 EXIT
