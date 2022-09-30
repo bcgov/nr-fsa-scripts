@@ -25,8 +25,11 @@ SET SQLBL ON;
 
 2) Run proxy user creation script
 
-start CreatePROXY_MOF_SCRIPT_FTA_ROLE.sql
-start Create_PROXY_MOF_SCRIPT_FTA_DATAFIX.sql
+start Create_PROXY_FSA_FTA_READ_ROLE.sql
+start Create_PROXY_FSA_FTA_WRITE_ROLE.sql
+start Create_PROXY_FSA_FTA_DELETE_ROLE.sql
+
+start Create_PROXY_FSA_FTA_DATAFIX.sql
 
 
 3)  Commit the changes

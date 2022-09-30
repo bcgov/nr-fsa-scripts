@@ -11,7 +11,7 @@ INSTRUCTIONS:
 Environments include: SNCTMP1, SNCTST1, SNCPRD1
 
 =============
-RRS Updates
+SNCSC Updates
 ============
 
 
@@ -25,8 +25,10 @@ SET SQLBL ON;
 
 2) Run proxy user creation script
 
-start CreatePROXY_MOF_SCRIPT_SNC_ROLE.sql
-start Create_PROXY_MOF_SCRIPT_SNC_DATAFIX.sql
+start Create_PROXY_FSA_SNC_READ_ROLE.sql
+start Create_PROXY_FSA_SNC_WRITE_ROLE.sql
+
+start Create_PROXY_FSA_SNC_DATAFIX.sql
 
 
 3)  Commit the changes
