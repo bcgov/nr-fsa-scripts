@@ -2,7 +2,7 @@
 * SPAR - Create Proxy user in dlvr,test env for fta datafixes		    *
 * DATE CREATED : 2022-09-21                                                 *
 * AUTHOR : CGI                                                              *
-* System :FTA								    *
+* System :FTA 								    *
 *                                                                           *
 *****************************************************************************
 
