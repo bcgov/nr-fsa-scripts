@@ -9,11 +9,11 @@ on:
   push:
     branches: [ main ]
     paths:
-    - 'scripts/**'
+    - 'datafix/scripts/**'
   pull_request:
     branches: [ main ]
     paths:
-    - 'scripts/**'
+    - 'datafix/scripts/**'
 
 jobs:
 
@@ -37,7 +37,7 @@ jobs:
         name: Calculate directories to turn into artifacts
         run: |
           declare -a dirs=()
-          for d in scripts/*/ ; do
+          for d in datafix/scripts/*/ ; do
             if [[ ${{ steps.files.outputs.all }} =~ $d ]];
             then
                 dirs+=("${d}")
