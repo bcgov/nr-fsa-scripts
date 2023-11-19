@@ -8,7 +8,7 @@
 
 INSTRUCTIONS:
 
-Environments include: FORTMP1, DBQ01, DBP01
+Environments include: FORTMP1, DBQ01, DBP01 (and the new RESULTS DEV env?)
 
 
 1) Log in to database as the schema owner, via SQL*Plus.  
