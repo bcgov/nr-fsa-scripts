@@ -2,7 +2,7 @@
  * Thursday Sept 20, 2022                                                *
  *                                                                       *
  * FTA datafix proxy user 					                                     *
- *                                                                       *
+ * RRS-1815                                                                      *
  * This script containts statements to create PROXY_FSA_FTA_DATAFIX	     *
  * to be used by the Datafix api to access FTA data						           *
  *                                                                       *

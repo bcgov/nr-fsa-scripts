@@ -2,6 +2,7 @@
  * Thursday Sept 20, 2022                                              *
  *                                                                       *
  * SNCSC datafix proxy user 					                                  *
+ * RRS-1815                                                                      *
  *                                                                       *
  * This script containts statements to create PROXY_FSA_SNC_DATAFIX	   *
  * to be used by the Datafix cron jobs to access SNCSC data						          *
