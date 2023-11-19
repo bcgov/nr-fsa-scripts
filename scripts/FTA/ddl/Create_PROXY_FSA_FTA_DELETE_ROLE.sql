@@ -7,8 +7,7 @@
  * to be used by the FTA Proxy User to access tables and views 			     *
  * within 'the' in order to perform datafixes.     						 					 *
  * 												                                               *
- *                                                                       *
- * Notes:                                                                *
+  * Notes:                                                                *
  *                                                                       *
  * 																																			 *
  *************************************************************************/
