@@ -29,6 +29,8 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v40
+        with:
+          path: 'scripts/**'
           
       # NOTE: `since_last_remote_commit: true` is implied by default and falls back to the previous local commit.
       # Find the files that are different so we can identify which package needs to be turned into an artifact
