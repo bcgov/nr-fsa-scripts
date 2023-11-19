@@ -30,23 +30,18 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v40
         with:
-          json: "true"
+          
       # NOTE: `since_last_remote_commit: true` is implied by default and falls back to the previous local commit.
+      # Find the files that are different so we can identify which package needs to be turned into an artifact
 
       - id: files
         name: List all changed files
         run: |
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            echo "$file was changed"
+            echo "$file were changed"
           done   
-      # Find the files that are different so we can identify which package needs to be turned into an artifact
 
-      #- id: files
-     #   name: Get change set
-      #  uses: jitterbit/get-changed-files@v1
-      #  with:
-      #    format: 'csv'
-    
+     # ensure only one subfolder has been changed -- ie. one zip per application
       - id: set-dir
         name: Calculate directories to turn into artifacts
         run: |
@@ -62,7 +57,7 @@ jobs:
             echo "You may not change more than 1 directory in a single PR. This one has ${#dirs[@]} directories with changes."
             exit 1
           fi
-          echo "::set-output name=path::${dirs[0]}"
+          echo "creating zip file for $d"
       
       # Create an artifact that can be accessed as a zip file download
       - uses: actions/upload-artifact@v3.1.3
