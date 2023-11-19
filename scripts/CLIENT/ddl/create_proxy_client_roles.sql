@@ -7,7 +7,6 @@
 -- CLIENT application, intended to grant read and read/write access to     
 -- data assets owned by the CLIENT application                             
 --          
-
 -- we need to add priveledges for sequences, triggers, packages and functions owned by forest client here.
 -- **********************************************************************
 
