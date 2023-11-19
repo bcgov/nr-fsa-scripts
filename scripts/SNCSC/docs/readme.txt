@@ -3,7 +3,7 @@
 * DATE CREATED : 2022-09-21                                                 *
 * AUTHOR : CGI                                                              *
 * System : SNCSC								    *
-*                                                                           *
+* the jobs tha use these accounts are monitored by 1Team                    *
 *****************************************************************************
 
 INSTRUCTIONS:
