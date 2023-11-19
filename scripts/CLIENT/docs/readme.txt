@@ -1,7 +1,7 @@
 -- **************************************************************************
 -- CLIENT - Create Proxy accounts for the new CLIENT application             
 -- DATE CREATED : 2022-09-28                                                 
--- AUTHOR : CGI                                                              
+-- AUTHOR : RFP                                                             
 -- System : CLIENT                                                             
 --  FSADT1-391                                                                         
 -- **************************************************************************

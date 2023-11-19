@@ -52,7 +52,7 @@ jobs:
         run: |
           declare -a dirs=()
           for d in scripts/*/ ; do
-            if [[ ${{ steps.files.outputs.all }} =~ $d ]];
+            if [[ ${{ steps.changed-files.outputs.all_changed_files }} =~ $d ]];
             then
                 dirs+=("${d}")
             fi
