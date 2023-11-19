@@ -47,10 +47,11 @@ jobs:
         name: Calculate directories to turn into artifacts
         run: |
           declare -a dirs=()
-          for d in /*/ ; do
+          for d in */ ; do
             if [[ ${{ steps.changed-files.outputs.all_changed_files }} =~ $d ]];
             then
                 dirs+=("${d}")
+                echo ${d}
             fi
           done
           if [ ${#dirs[@]} -gt 1 ];
