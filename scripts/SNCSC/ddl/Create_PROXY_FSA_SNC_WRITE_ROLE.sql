@@ -8,8 +8,8 @@
  * within 'the' in order to perform datafixes.     						 					 *
   *                                                                       *
  * Notes:                                                                *
- *                                                                       *
- * 																																			 *
+ * this is part the suite of datafixes for RRS monitored by 1Team                         *
+ * 																	 *
  *************************************************************************/
 SPOOL LOGS\Create_PROXY_FSA_SNC_WRITE_ROLE.LOG 
 
