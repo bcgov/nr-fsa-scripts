@@ -24,7 +24,7 @@ jobs:
       create_artifact: ${{ steps.set-dir.outputs.create_artifact }}
       path: ${{ steps.set-dir.outputs.path }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4.1.1
       
       # Find the files that are different so we can identify which package needs to be turned into an artifact
       - id: files
@@ -51,7 +51,7 @@ jobs:
           echo "::set-output name=path::${dirs[0]}"
       
       # Create an artifact that can be accessed as a zip file download
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v3.1.3
         if: ${{ success() }}
         with:
           name: "changescripts"
