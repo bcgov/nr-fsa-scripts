@@ -9,7 +9,7 @@
 -- new CLIENT application built under the FSA Program.
 --
 -- These new accounts are intended to be used for read and read/write access                                                                                                                            
--- 																																			 *
+-- 	need to confirm concurrency climits on this.. 												 *
 -- ***************************************************************************
 SPOOL logs\create_proxy_client_accounts.log
 
