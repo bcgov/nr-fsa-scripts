@@ -1,39 +1,33 @@
 *****************************************************************************
-* SPAR - Create Proxy user in test env for rrs	                            *
-* DATE CREATED : 2022-09-20                                                 *
-* AUTHOR : CGI                                                              *
-* System : RRS								    *
+* SILVA - Create Proxy accounts for the new SILVA application                 *
+* DATE CREATED : 2023-11-28                                                 *
+* AUTHOR : mrdouvil                                                         *
+* System : SILVA                                                            *
 *                                                                           *
 *****************************************************************************
 
 INSTRUCTIONS:
 
-Environments include: RRSTMP1, RRSTST1, RRSPRD1
-
-=============
-RRS Updates
-============
+Environments include: FORTMP1, DBQ01, DBP01
 
 
-1) From the ddl folder, log in to database as app_rrs schema owner and execute the SET statements before running the scripts
+1) Log in to database as the schema owner, via SQL*Plus.  
 
-sqlplus username/password@Environment
+Execute the SET statements before running the scripts
 
-SET SCAN OFF;
+$ sqlplus username/password@Environment
+
+SET DEFINE ON;
 SET SQLBL ON;
 
+2) From the SQL Prompt, run the proxy roles creation script
 
-2) Run proxy user creation script
+start create_proxy_silva_roles.sql
 
-start Create_PROXY_FSA_RRS_READ_ROLE.sql
-start Create_PROXY_FSA_RRS_WRITE_ROLE.sql
+3) From the SQL Prompt, run the proxy user creation script
 
-start Create_PROXY_FSA_RRS_DATAFIX.sql
+start create_proxy_silva_accounts.sql
 
+4) Exit SQL*Plus
 
-3)  Commit the changes
-
-     commit;
-
-4) EXIT
 EXIT
