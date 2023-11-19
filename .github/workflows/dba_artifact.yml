@@ -74,5 +74,5 @@ jobs:
         if: ${{ success() }}
         with:
           name: "changescripts"
-          path: "${{ steps.set-dir.outputs.setpath }}""
+          path: "${{ steps.set-dir.outputs.setpath }}"
           
