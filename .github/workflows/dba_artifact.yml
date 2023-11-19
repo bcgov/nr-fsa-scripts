@@ -47,7 +47,12 @@ jobs:
         name: Calculate directories to turn into artifacts
         run: |
           declare -a dirs=()
-          echo $dirs
+          for d in ./*/ ; do
+            if [[ ${{steps.changed-files.outputs.all_changed_files }} =~ $d ]];
+            then
+                dirs+=("${d}")
+            fi
+          done
           if [ ${#dirs[@]} -gt 1 ];
           then
             echo "You may not change more than 1 directory in a single PR. This one has ${#dirs[@]} directories with changes."
