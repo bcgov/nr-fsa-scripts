@@ -9,7 +9,7 @@
  * 													                                             *
  *                                                                       *
  * Notes:                                                                *
- *      data fixes monitored by 1team                                                                       *
+ *     data fixes monitored by 1team                                                                       *
  * 																																			 *
  *************************************************************************/
 SPOOL LOGS\Create_PROXY_FSA_RRS_WRITE_ROLE.LOG 
