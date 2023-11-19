@@ -7,7 +7,7 @@
  * to be used by the Datafix api to access FTA data						           *
  *                                                                       *
  * Notes:                                                                *
- *                                                                       *
+ *  data fixes monitored by 1team                                        *
  * 																																			 *
  *************************************************************************/
 SPOOL LOGS\Create_PROXY_FSA_FTA_DATAFIX.LOG 

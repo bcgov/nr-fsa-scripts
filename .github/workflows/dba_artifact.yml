@@ -56,7 +56,7 @@ jobs:
             echo "You may not change more than 1 directory in a single PR. This one has ${#dirs[@]} directories with changes."
             exit 1
           fi
-            echo "path::${dirs[0]}" >> "$GITHUB_OUTPUT"
+            echo "${dirs[0]}" >> "$GITHUB_OUTPUT"
 
       - name: get-path
         env:
