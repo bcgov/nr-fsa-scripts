@@ -61,18 +61,18 @@ jobs:
             exit 1
           fi
             
-            echo "path=${dirs[0]}" >> "$GITHUB_OUTPUT"
+            echo "setpath=${dirs[0]}" >> "$GITHUB_OUTPUT"
             echo "github output $GITHUB_OUTPUT"
 
       - name: get-path
         env:
-          PATH: ${{ steps.set-dir.outputs.path }}
-        run: echo "The selected path is $path"
+          PATH: ${{ steps.set-dir.outputs.setpath }}
+        run: echo "The selected path is $setpath"
       
       # Create an artifact that can be accessed as a zip file download
       - uses: actions/upload-artifact@v3.1.3
         if: ${{ success() }}
         with:
           name: "changescripts"
-          path: "$GITHUB_OUTPUT"
+          path: "${{ steps.set-dir.outputs.setpath }}""
           
