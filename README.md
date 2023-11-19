@@ -4,7 +4,7 @@ Scripts to be executed against on-prem databases, for the Forestry Suite of Appl
 
 The initial intent of this repository is to serve as a central location for scripts, but it can be extended to store additional information associated to data ownership or data contracts, and other associated files.
 
-NOTE: see the sub-folder SILVA -- as an example script and template folder structure. 
+NOTE: see the sub-folder SILVA -- as an example script and template folder structure. --- [https://github.com/bcgov/nr-fsa-scripts/tree/main/scripts/SILVA](https://github.com/bcgov/nr-fsa-scripts/tree/main/scripts/SILVA)
 
 # LEGEND
 
