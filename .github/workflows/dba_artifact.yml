@@ -49,7 +49,7 @@ jobs:
           declare -a dirs=()
           for d in scripts/*/ ; do
             echo "d is $d"
-            if [[ ${{steps.changed-files.outputs.all_changed_files }} =~ $d ]];
+            if [[ "scripts/"${{steps.changed-files.outputs.all_changed_files }} =~ $d ]];
             then
                 dirs+=("${d}")
                 echo "d is $d"
