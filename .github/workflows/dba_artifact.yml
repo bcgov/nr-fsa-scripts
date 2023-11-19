@@ -47,7 +47,7 @@ jobs:
         name: Calculate directories to turn into artifacts
         run: |
           declare -a dirs=()
-          for d in ./*/ ; do
+          for d in scripts/*/ ; do
             echo "d is $d"
             if [[ ${{steps.changed-files.outputs.all_changed_files }} =~ $d ]];
             then
