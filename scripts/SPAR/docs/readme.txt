@@ -1,7 +1,7 @@
 *****************************************************************************
 * SPAR - Create Proxy accounts for the new SPAR application                 *
 * DATE CREATED : 2022-09-28                                                 *
-* AUTHOR : CGI                                                              *
+* AUTHOR : AMB                                                             *
 * System : SPAR                                                             *
 *                                                                           *
 *****************************************************************************
