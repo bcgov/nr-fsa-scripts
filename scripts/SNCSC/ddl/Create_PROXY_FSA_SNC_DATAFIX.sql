@@ -8,7 +8,7 @@
  * to be used by the Datafix cron jobs to access SNCSC data						          *
  *                                                                       *
  * Notes:                                                                *
- *                                                                       *
+ *           data fixes monitored by 1team                                                                  *
  * 																																			 *
  *************************************************************************/
 SPOOL LOGS\Create_PROXY_FSA_SNC_DATAFIX.LOG 

@@ -48,9 +48,11 @@ jobs:
         run: |
           declare -a dirs=()
           for d in ./*/ ; do
+            echo "d is $d"
             if [[ ${{steps.changed-files.outputs.all_changed_files }} =~ $d ]];
             then
                 dirs+=("${d}")
+                echo "d is $d"
             fi
           done
           if [ ${#dirs[@]} -gt 1 ];
@@ -59,7 +61,7 @@ jobs:
             exit 1
           fi
             echo "${dirs[0]}" >> "$GITHUB_OUTPUT"
-            echo "$GITHUB_OUTPUT"
+            echo "github output $GITHUB_OUTPUT"
 
       - name: get-path
         env:
