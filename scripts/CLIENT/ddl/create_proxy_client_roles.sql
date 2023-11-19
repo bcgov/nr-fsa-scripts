@@ -6,7 +6,9 @@
 -- This script containts statements to create proxy accounts for the new 
 -- CLIENT application, intended to grant read and read/write access to     
 -- data assets owned by the CLIENT application                             
---                                                                       
+--          
+
+-- we need to add priveledges for sequences, triggers, packages and functions owned by forest client here.
 -- **********************************************************************
 
 SPOOL logs\create_proxy_client_roles.log 
