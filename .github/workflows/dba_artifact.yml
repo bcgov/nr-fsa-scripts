@@ -47,20 +47,14 @@ jobs:
         name: Calculate directories to turn into artifacts
         run: |
           declare -a dirs=()
-          for d in * ; do
-            if [[ ${{ steps.changed-files.outputs.all_changed_files }} =~ $d ]];
-            then
-                dirs+=("${d}")
-                echo $d
-                echo $dirs
-            fi
-          done
+          echo $dirs
           if [ ${#dirs[@]} -gt 1 ];
           then
             echo "You may not change more than 1 directory in a single PR. This one has ${#dirs[@]} directories with changes."
             exit 1
           fi
             echo "${dirs[0]}" >> "$GITHUB_OUTPUT"
+            echo "$GITHUB_OUTPUT"
 
       - name: get-path
         env:
@@ -72,5 +66,5 @@ jobs:
         if: ${{ success() }}
         with:
           name: "changescripts"
-          path: $path"
+          path: "$GITHUB_OUTPUT"
           
