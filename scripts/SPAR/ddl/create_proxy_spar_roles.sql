@@ -629,15 +629,4 @@ GRANT SELECT, INSERT, UPDATE ON THE.VEG_LOT_SOURCE_CODE TO FSA_SPAR_READ_WRITE_R
 GRANT SELECT, INSERT, UPDATE ON THE.VEG_LOT_STATUS_CODE TO FSA_SPAR_READ_WRITE_ROLE;
 GRANT SELECT, INSERT, UPDATE ON THE.VEG_LOT_TRANSACTION_CODE TO FSA_SPAR_READ_WRITE_ROLE;
 
-CREATE ROLE fsa_spar_sync_role;
-
-GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot TO fsa_spar_sync_role;
-GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_owner_quantity TO fsa_spar_sync_role;
-GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_parent_tree TO fsa_spar_sync_role;
-GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_parent_tree_gen_qlty TO fsa_spar_sync_role;
-GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_plan_zone TO fsa_spar_sync_role;
-GRANT SELECT, INSERT, UPDATE, DELETE ON the.smp_mix TO fsa_spar_sync_role;
-GRANT SELECT, INSERT, UPDATE, DELETE ON the.smp_mix_gen_qlty TO fsa_spar_sync_role;
-
-
 SPOOL OFF 
