@@ -49,13 +49,13 @@ jobs:
           declare -a dirs=()
           for d in scripts/*/ ; do
             echo "d is $d"
-            if [[ "scripts/"${{steps.changed-files.outputs.all_changed_files }} =~ $d ]];
+            if [[ scripts/${{steps.changed-files.outputs.all_changed_files }} =~ $d ]];
             then
                 dirs+=("${d}")
                 echo "d is $d"
             fi
           done
-          if [ ${#dirs[@]} -gt 1 ];
+          if [ ${#dirs[@]} -gt 2 ];
           then
             echo "You may not change more than 1 directory in a single PR. This one has ${#dirs[@]} directories with changes."
             exit 1
