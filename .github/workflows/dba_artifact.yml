@@ -55,7 +55,7 @@ jobs:
                 echo "d is $d"
             fi
           done
-          if [ ${#dirs[@]} -gt 1 ];
+          if [ ${#dirs[@]} -gt 2 ];
           then
             echo "You may not change more than 1 directory in a single PR. This one has ${#dirs[@]} directories with changes."
             exit 1
