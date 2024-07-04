@@ -15,9 +15,11 @@ SPOOL logs\creaate_fsa_spar_sync_role.log
 CREATE ROLE fsa_spar_sync_role;
 
 GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot TO fsa_spar_sync_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_genetic_worth TO fsa_spar_sync_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_owner_quantity TO fsa_spar_sync_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_parent_tree TO fsa_spar_sync_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_parent_tree_gen_qlty TO fsa_spar_sync_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_parent_tree_smp_mix TO fsa_spar_sync_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_plan_zone TO fsa_spar_sync_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON the.smp_mix TO fsa_spar_sync_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON the.smp_mix_gen_qlty TO fsa_spar_sync_role;
