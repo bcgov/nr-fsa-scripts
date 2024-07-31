@@ -23,5 +23,9 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_parent_tree_smp_mix TO fsa_s
 GRANT SELECT, INSERT, UPDATE, DELETE ON the.seedlot_plan_zone TO fsa_spar_sync_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON the.smp_mix TO fsa_spar_sync_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON the.smp_mix_gen_qlty TO fsa_spar_sync_role;
+GRANT SELECT ON the.orchard TO fsa_spar_sync_role;
+GRANT SELECT ON the.spu_orchard_link TO fsa_spar_sync_role;
+GRANT SELECT ON the.seed_plan_unit TO fsa_spar_sync_role;
+GRANT SELECT ON the.seed_plan_zone_code TO fsa_spar_sync_role;
 
 SPOOL OFF
